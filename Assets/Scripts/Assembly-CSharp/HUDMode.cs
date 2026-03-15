@@ -1,0 +1,9 @@
+internal enum HUDMode
+{
+	EDIT = 0,
+	SHARING_TWITTER = 1,
+	SHARING_FACEBOOK = 2,
+	SHARING_EMAIL = 3,
+	TAKING_PICTURE = 4,
+	LOCAL_STORE = 5
+}

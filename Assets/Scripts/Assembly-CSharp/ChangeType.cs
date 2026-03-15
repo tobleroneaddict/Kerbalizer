@@ -1,0 +1,12 @@
+public enum ChangeType
+{
+	HAIR = 0,
+	FACIAL_EXPRESSION = 1,
+	FACIAL_DETAILS = 2,
+	TOP = 3,
+	BOTTOM = 4,
+	SHOES = 5,
+	ACCESORIES = 6,
+	BACKGROUND = 7,
+	OVERALL = 8
+}

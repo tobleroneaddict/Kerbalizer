@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: mat_female_shirt02
+  m_Shader: {fileID: 4800000, guid: 1fc52be600606074f9cd0b05316ce7a5, type: 3}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 68f0210842dd4d2459d6ff691f9977c1, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats: {}
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 0.06291123, g: 0.8134328, b: 0.024281556, a: 1}
+      data:
+        first:
+          name: _ColorB
+        second: {r: 0.9849076, g: 1, b: 0.9951599, a: 1}
+      data:
+        first:
+          name: _ColorC
+        second: {r: 0.014925361, g: 0.015148127, b: 0.015148127, a: 1}
