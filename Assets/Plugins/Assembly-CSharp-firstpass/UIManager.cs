@@ -164,7 +164,7 @@ public class UIManager : MonoBehaviour
 
 	private StringBuilder sb = new StringBuilder();
 
-	private TouchScreenKeyboard iKeyboard;
+	//private TouchScreenKeyboard iKeyboard;
 
 	public static UIManager instance
 	{
@@ -220,12 +220,12 @@ public class UIManager : MonoBehaviour
 				{
 					controlText = string.Empty;
 				}
-				if (!Application.isEditor)
-				{
-					TouchScreenKeyboard.hideInput = kbInfo.hideInput;
-					iKeyboard = TouchScreenKeyboard.Open(controlText, kbInfo.type, kbInfo.autoCorrect, kbInfo.multiline, kbInfo.secure, kbInfo.alert, controlText);
-					iKeyboard.text = controlText;
-				}
+				//if (!Application.isEditor)
+				//{
+				//	TouchScreenKeyboard.hideInput = kbInfo.hideInput;
+				//	iKeyboard = TouchScreenKeyboard.Open(controlText, kbInfo.type, kbInfo.autoCorrect, kbInfo.multiline, kbInfo.secure, kbInfo.alert, controlText);
+				//	iKeyboard.text = controlText;
+				//}
 				insert = kbInfo.insert;
 				if (sb.Length > 0)
 				{
@@ -236,11 +236,11 @@ public class UIManager : MonoBehaviour
 					sb.Append(controlText);
 				}
 			}
-			else if (iKeyboard != null)
-			{
-				iKeyboard.active = false;
-				iKeyboard = null;
-			}
+			//else if (iKeyboard != null)
+			//{
+			//	iKeyboard.active = false;
+			//	iKeyboard = null;
+			//}
 		}
 	}
 
@@ -304,10 +304,10 @@ public class UIManager : MonoBehaviour
 		}
 		if (pointerType == POINTER_TYPE.TOUCHPAD || pointerType == POINTER_TYPE.TOUCHPAD_AND_RAY)
 		{
-			TouchScreenKeyboard.autorotateToPortrait = autoRotateKeyboardPortrait;
-			TouchScreenKeyboard.autorotateToPortraitUpsideDown = autoRotateKeyboardPortraitUpsideDown;
-			TouchScreenKeyboard.autorotateToLandscapeLeft = autoRotateKeyboardLandscapeLeft;
-			TouchScreenKeyboard.autorotateToLandscapeRight = autoRotateKeyboardLandscapeRight;
+			//TouchScreenKeyboard.autorotateToPortrait = autoRotateKeyboardPortrait;
+			//TouchScreenKeyboard.autorotateToPortraitUpsideDown = autoRotateKeyboardPortraitUpsideDown;
+			//TouchScreenKeyboard.autorotateToLandscapeLeft = autoRotateKeyboardLandscapeLeft;
+			//TouchScreenKeyboard.autorotateToLandscapeRight = autoRotateKeyboardLandscapeRight;
 			if (SystemInfo.deviceModel == "iPad")
 			{
 				numTouches = 11;
@@ -1308,23 +1308,23 @@ public class UIManager : MonoBehaviour
 	{
 		if (!Application.isEditor)
 		{
-			if (iKeyboard != null)
-			{
-				if (iKeyboard.done || !iKeyboard.active)
-				{
-					controlText = iKeyboard.text;
-					controlText = ((IKeyFocusable)focusObj).SetInputText(controlText, ref insert);
-					((IKeyFocusable)focusObj).Commit();
-					FocusObject = null;
-				}
-				else if (!(controlText == iKeyboard.text))
-				{
-					string before = controlText;
-					controlText = iKeyboard.text;
-					insert = FindInsertionPoint(before, controlText);
-					((IKeyFocusable)focusObj).SetInputText(controlText, ref insert);
-				}
-			}
+			//if (iKeyboard != null)
+			//{
+			//	if (iKeyboard.done || !iKeyboard.active)
+			//	{
+			//		controlText = iKeyboard.text;
+			//		controlText = ((IKeyFocusable)focusObj).SetInputText(controlText, ref insert);
+			//		((IKeyFocusable)focusObj).Commit();
+			//		FocusObject = null;
+			//	}
+			//	else if (!(controlText == iKeyboard.text))
+			//	{
+			//		string before = controlText;
+			//		controlText = iKeyboard.text;
+			//		insert = FindInsertionPoint(before, controlText);
+			//		((IKeyFocusable)focusObj).SetInputText(controlText, ref insert);
+			//	}
+			//}
 		}
 		else
 		{

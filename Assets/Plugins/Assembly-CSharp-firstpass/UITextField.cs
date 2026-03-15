@@ -53,7 +53,7 @@ public class UITextField : AutoSpriteControlBase, IKeyFocusable
 
 	protected bool maxLengthExceeded;
 
-	public TouchScreenKeyboardType type;
+	//public TouchScreenKeyboardType type;
 
 	public bool autoCorrect;
 
@@ -325,7 +325,7 @@ public class UITextField : AutoSpriteControlBase, IKeyFocusable
 				customKeyboard = uITextField.customKeyboard;
 				customFocusEvent = uITextField.customFocusEvent;
 				margins = uITextField.margins;
-				type = uITextField.type;
+				//type = uITextField.type;
 				autoCorrect = uITextField.autoCorrect;
 				alert = uITextField.alert;
 				hideInput = uITextField.hideInput;
@@ -367,7 +367,7 @@ public class UITextField : AutoSpriteControlBase, IKeyFocusable
 	public string GetInputText(ref KEYBOARD_INFO info)
 	{
 		info.insert = insert;
-		info.type = type;
+		//info.type = type;
 		info.autoCorrect = autoCorrect;
 		info.multiline = multiline;
 		info.secure = password;

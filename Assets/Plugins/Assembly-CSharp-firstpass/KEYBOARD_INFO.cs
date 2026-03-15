@@ -2,7 +2,7 @@ using UnityEngine;
 
 public struct KEYBOARD_INFO
 {
-	public TouchScreenKeyboardType type;
+	//public TouchScreenKeyboardType type;
 
 	public bool autoCorrect;
 
