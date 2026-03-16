@@ -293,8 +293,16 @@ public class Screenshot : MonoBehaviour
 		RenderTexture.active = screenShot;
 		tmpTexture.ReadPixels(new Rect(0f, 0f, Screen.width, Screen.height), 0, 0);
 		tmpTexture.Apply();
-		File.WriteAllBytes(bytes: tmpTexture.EncodeToPNG(), path: "/sdcard/DCIM/Camera/" + s_name);
-		yield return new WaitForSeconds(2f);
+
+		//Platform check
+		if (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.Android) { 
+	        //Mobile
+			File.WriteAllBytes(bytes: tmpTexture.EncodeToPNG(), path: "/sdcard/DCIM/Camera/" + s_name);
+		} else {     
+			//PC
+			File.WriteAllBytes(bytes: tmpTexture.EncodeToPNG(), path: "./" + s_name);
+        }
+        yield return new WaitForSeconds(2f);
 		HUDEZ.changeShareButState("dlButton", 0);
 		HUDEZ.isProcesing = false;
 	}
